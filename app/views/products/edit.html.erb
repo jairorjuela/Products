@@ -1,0 +1,102 @@
+<h1>Editar Producto</h1>
+
+
+<%= form_for (@product) do |f| %>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="form-group">
+
+
+      <%= f.text_field :name, placeholder: "Nombre del Producto", class: "form-control" %>
+      <%= f.number_field :price, placeholder: "Precio del Producto", class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Perfumes) %>
+      <%= label_tag(:Perfumes, "Perfumes") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Libros) %>
+      <%= label_tag(:Libros, "Libros") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Tegnología) %>
+      <%= label_tag(:Tegnología, "Tecnología") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Electrodomésticos) %>
+      <%= label_tag(:Electrodomésticos, "Electrodomésticos") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Aseo) %>
+      <%= label_tag(:Aseo, "Aseo") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Jugetes) %>
+      <%= label_tag(:Jugetes, "Jugetes") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Ropa) %>
+      <%= label_tag(:Ropa, "Ropa") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Oficina) %>
+      <%= label_tag(:Oficina, "Oficina") %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= check_box_tag(:Mascotas) %>
+      <%= label_tag(:Mascotas, "Mascotas") %>
+    </div>
+  </div>
+</div>
+
+
+  <%= f.submit "Editar Producto", class: "btn btn-primary btn-lg" %>
+
+<% end %>

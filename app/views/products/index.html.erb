@@ -1,0 +1,30 @@
+<h1>Products</h1>
+
+<%= link_to "Producto Nuevo", new_product_path, class: "btn btn-primary btn-lg" %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Categorías</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td>
+          <% product.categories.each do |category| %>
+          <%= category.name %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to 'Editar', edit_product_path(product), class: "btn btn-primary btn-sm" %>
+          <%= link_to 'Eliminar', product_path(product), class: "btn btn-primary btn-sm", method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
